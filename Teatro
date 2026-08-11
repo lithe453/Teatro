@@ -1,0 +1,45 @@
+def mostrar_teatro(): 
+
+    for x in range (len(teatro)): 
+        print(f"fila {x} - {teatro [x][0]} {teatro [x][1]} {teatro [x][2]} {teatro [x][3]} {teatro [x][4]} {teatro [x][5]} {teatro [x][6]} {teatro [x][7]} {teatro [x][8]} {teatro [x][9]}") 
+        ila0 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
+        fila1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
+        fila2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
+        fila3 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
+        fila4 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
+        fila5 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
+        fila6 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
+        fila7 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
+        fila8 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
+        fila9 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
+
+        teatro = [fila0, fila1, fila2, fila3, fila4] 
+
+        continuar = "n" 
+        while continuar == "n": 
+            print("--------------------")
+            print("====== TEATRO ======") 
+            print("---------------------")
+
+            print("1- mostrar teatro") 
+            print("2- reserva lugar") 
+            print("3- cancelar reserva") 
+            print("4- fechar o programa") 
+
+            op = int(input("escolha uma opcao: "))
+
+            match op: 
+                case 1: 
+                    mostrar_teatro() 
+                case 2: 
+                    mostrar_teatro() 
+                    lugar_escolhida = int(input("escolha um lugar de 0 a 9: ")) 
+                    fila_escolhida = int(input("escolha uma fila de 0 a 9: ")) 
+                    teatro[fila_escolhida][lugar_escolhida] = 1 
+                case 3: 
+                    mostrar_teatro() 
+                    lugar_escolhida = int(input("escolha um lugar de 0 a 9: ")) 
+                    fila_escolhida = int(input("escolha uma fila de 0 a 9: ")) 
+                    teatro[fila_escolhida][lugar_escolhida] = 0 
+                case 4: 
+                    continuar = input("deseja fechar o progama? s/n: ")                                                                                       
